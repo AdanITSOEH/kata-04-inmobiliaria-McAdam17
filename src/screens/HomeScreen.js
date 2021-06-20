@@ -7,14 +7,14 @@ import data from '../data'
 export default function HomeScreen () {
   return (
     <View style={styles.container}>
-      <StatusBar style="auto" />
-        <ScrollView>
+      <ScrollView>
           {
-              data.map(house => (
-                <HouseCard key={house.id} houseInfo={house}/>
-              ))
+            data.map(house => (
+              <HouseCard key={house.id} houseInfo={house}/>
+            ))
           }
       </ScrollView>
+      <StatusBar style="auto" />
     </View>
   )
 }
@@ -23,6 +23,6 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: '#fff',
-    paddingTop: 10
+    paddingTop: 20
   }
 })

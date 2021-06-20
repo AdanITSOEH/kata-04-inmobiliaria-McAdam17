@@ -1,22 +1,32 @@
 import React from 'react'
 import { StyleSheet, Text, View, Image } from 'react-native'
 import TextIcon from './TextIcon'
+import { Icon } from 'react-native-elements'
 
 function HouseCard ({ houseInfo }) {
   const { title, img, location, rooms, bathrooms, dimensions, price } = houseInfo
   return (
     <View style={styles.container}>
-        <Image style={styles.img} source={ img }/>
-        <View style={styles.info}>
-            <Text style={styles.title}>{title}</Text>
-            <TextIcon title= {location} iconName="map-marker" light={true}/>
-            <View style={styles.infoData}>
-                <TextIcon title= {rooms} iconName="bed"/>
-                <TextIcon title= {bathrooms} iconName="bath"/>
-                <TextIcon title= {dimensions} iconName="object-group"/>
-            </View>
-            <Text style={styles.price}>${price}/m</Text>
-        </View>
+      <View style= {styles.icon}>
+        <Icon 
+            color='#00ba74' 
+            name='heart' 
+            reverse
+            size= {12} 
+            type='font-awesome'
+        />
+      </View>
+      <Image style={styles.img} source={ img }/>
+      <View style={styles.info}>
+          <Text style={styles.title}>{title}</Text>
+          <TextIcon title= {location} iconName="map-marker" light={true}/>
+          <View style={styles.infoData}>
+              <TextIcon title= {rooms} iconName="bed"/>
+              <TextIcon title= {bathrooms} iconName="bath"/>
+              <TextIcon title= {dimensions} iconName="object-group"/>
+          </View>
+          <Text style={styles.price}>${price}/m</Text>
+      </View>
     </View>
   )
 }
@@ -27,8 +37,9 @@ const styles = StyleSheet.create({
     borderRadius: 20,
     flex: 0,
     flexDirection: 'row',
-    marginTop: 20,
-    padding: 10
+    marginBottom: 20,
+    padding: 10,
+    position: 'relative'
   },
   img: {
     borderRadius: 20,
@@ -52,6 +63,11 @@ const styles = StyleSheet.create({
   price: {
     fontSize: 16,
     fontWeight: 'bold'
+  },
+  icon: {
+    bottom: 0,
+    right: 0,
+    position: 'absolute'
   }
 })
 
