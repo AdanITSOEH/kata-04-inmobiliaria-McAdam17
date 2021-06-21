@@ -66,6 +66,6 @@ En la carpeta [img](/img) se encuentra el diseño solicitado en formato PNG y [F
 - Incluir en el repositorio la puntuación obtenida (badge) en CodeClimate
 - [Los commits deben se significativos](https://medium.com/better-programming/you-need-meaningful-commit-messages-d869e44e98d4)
 
-## Recursos
+## Recursos 
 [Para apoyo de tus actividades utiliza esta lista de recursos recomendados](https://github.com/bright-coders/commons/tree/master/topics/resources-react-native)
   
